@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f1e9ff">
+<meta name="description" content="A dreamy lavender birthday surprise made with love for Diksha, from Mohit.">
+<title>For Diksha (JUMBOO!!) ♡</title>
+<style>
+:root{--lav:#cbb6ff;--lav2:#eee5ff;--deep:#6741a5;--ink:#403151;--cream:#fffaff;--rose:#ffb9d4;--line:#e7dcff}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:18px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;overflow-x:hidden}
+button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible{outline:3px solid #9265df;outline-offset:4px}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:38px 18px;position:relative;overflow:hidden;background:radial-gradient(circle at 15% 20%,#f6cde6,transparent 30%),radial-gradient(circle at 88% 70%,#d7c4ff,transparent 35%),linear-gradient(135deg,#fff8ff,#f0eaff 52%,#fff5fb)}
+.hero-inner{position:relative;z-index:2;max-width:790px}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;font:700 .72rem Arial,sans-serif;color:var(--deep)}
+h1{font-size:clamp(3rem,11vw,7rem);line-height:.96;margin:20px 0;color:#64409d;font-weight:normal}
+h1 span{display:block;font-style:italic;color:#ad77ce}
+.subtitle{font-size:clamp(1.04rem,3vw,1.3rem);line-height:1.8;max-width:580px;margin:22px auto}
+.btn{border:0;border-radius:999px;padding:14px 23px;background:var(--deep);color:white;box-shadow:0 9px 25px #6741a530;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px #6741a545}
+.btn.light{background:white;color:var(--deep);border:1px solid var(--line);box-shadow:none}
+#musicStatus{font: .82rem/1.5 Arial,sans-serif;color:#816b9b;margin-top:13px}
+.floating{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.float{position:absolute;bottom:-55px;opacity:.7;animation:rise linear infinite}
+@keyframes rise{to{transform:translateY(-115vh) rotate(25deg);opacity:0}}
+section{padding:76px 20px;max-width:1080px;margin:auto}
+.section-title{text-align:center;font-size:clamp(2rem,6vw,3.5rem);font-weight:normal;color:#6741a5;margin:0 0 12px}
+.section-sub{text-align:center;line-height:1.75;margin:0 auto 34px;max-width:650px;color:#796887}
+.note{background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(22px,5vw,44px);max-width:780px;margin:auto;box-shadow:0 15px 45px #6741a50b;line-height:1.95;font-size:1.06rem}
+.signature{color:#8054b8;font-style:italic;text-align:right;font-size:1.3rem}
+.gift-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.gift{border:1px solid var(--line);background:#fff;border-radius:24px;padding:24px 17px;text-align:center;min-height:218px;box-shadow:0 12px 30px #6741a50b;transition:.2s;color:var(--ink)}
+.gift:hover{transform:translateY(-4px);background:#fffcff}
+.gift-icon{font-size:3.5rem;display:block;margin:4px 0 14px;filter:drop-shadow(0 5px 4px #d8b5ff66)}
+.gift h3{font-weight:normal;font-size:1.3rem;margin:8px}.gift p{font: .9rem/1.6 Arial,sans-serif;color:#88769b}
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.photo{position:relative;min-height:280px;border-radius:23px;overflow:hidden;background:linear-gradient(145deg,#eadfff,#ffe4f1);display:flex;align-items:center;justify-content:center;text-align:center;padding:18px;border:1px solid var(--line)}
+.photo img{position:absolute;width:100%;height:100%;object-fit:cover;inset:0}
+.photo .placeholder{position:relative;z-index:1;font-size:1rem;line-height:1.7;color:#654a82;background:#ffffffd9;border-radius:16px;padding:16px}
+.photo img:not([src]),.photo img[src=""]{display:none}
+.photo.has-image .placeholder{display:none}
+.photo figcaption{position:absolute;bottom:0;left:0;right:0;padding:28px 12px 13px;background:linear-gradient(transparent,#241533b8);color:white;z-index:2;font: .9rem Arial,sans-serif;opacity:0;transition:opacity .2s}
+.photo.has-image:hover figcaption,.photo.has-image:focus-within figcaption{opacity:1}
+.timeline{max-width:720px;margin:auto;position:relative;display:grid;gap:15px}
+.memory{background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px 23px;line-height:1.75;box-shadow:0 8px 25px #6741a508}
+.memory b{color:#8054b8}
+.memory .date{font:700 .72rem Arial,sans-serif;letter-spacing:.13em;text-transform:uppercase;color:#b17cc8}
+.final{background:linear-gradient(145deg,#eee4ff,#ffe5f1);border:1px solid #e8d9ff;border-radius:30px;padding:clamp(28px,6vw,52px) 22px;text-align:center}
+.final h2{font-weight:normal;font-size:clamp(2rem,6vw,3.4rem);color:#6741a5}
+footer{text-align:center;padding:28px 15px 45px;color:#927da9;font-size:.9rem;line-height:1.8}
+.modal{position:fixed;inset:0;background:#251538c9;z-index:10;display:none;align-items:center;justify-content:center;padding:20px}
+.modal.show{display:flex}.modal-card{background:#fffaff;border-radius:27px;padding:32px 24px;max-width:490px;width:100%;text-align:center;position:relative;box-shadow:0 20px 80px #0003;animation:pop .25s ease;border:1px solid #eee1ff}
+@keyframes pop{from{transform:scale(.86);opacity:0}to{transform:scale(1);opacity:1}}
+.modal-card .big{font-size:4rem}.modal-card h3{font-size:2rem;font-weight:normal;color:#6741a5;margin:10px}
+.close{position:absolute;right:15px;top:12px;border:0;background:transparent;font-size:1.7rem;color:#8065a1}
+.heart-pop{position:fixed;pointer-events:none;z-index:20;animation:heartout 1.35s ease-out forwards;font-size:24px}
+@keyframes heartout{to{transform:translateY(-140px) scale(1.7) rotate(18deg);opacity:0}}
+.small-note{font: .82rem/1.6 Arial,sans-serif;color:#927da9;text-align:center;margin-top:17px}
+@media(max-width:680px){section{padding:58px 16px}.gift-grid{grid-template-columns:1fr}.gift{min-height:0}.gallery{grid-template-columns:1fr 1fr}.photo{min-height:220px}}
+@media(max-width:420px){.gallery{grid-template-columns:1fr}.photo{min-height:290px}.eyebrow{letter-spacing:.12em}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="floating" id="floating" aria-hidden="true"></div>
+<header class="hero" id="top">
+  <div class="hero-inner">
+    <div class="eyebrow">A tiny corner of the universe, just for you</div>
+    <h1>Happy Birthday,<span>Diksha ♡</span></h1>
+    <p class="subtitle">To my <strong>JUMBOO!!</strong> — the girl who makes my world softer, brighter, and a whole lot more magical. Today, every little sparkle is for you. ✨</p>
+    <button class="btn" id="startBtn">Open your surprise 💌</button>
+    <p id="musicStatus" aria-live="polite">A little love note, a few surprises, and a song for us. Tap to begin ♫</p>
+  </div>
+</header>
+
+<section id="letter">
+  <h2 class="section-title">A letter for my JUMBOO 💜</h2>
+  <p class="section-sub">Some things are easier to write when they come straight from the heart.</p>
+  <div class="note">
+    <p>My dearest Diksha,</p>
+    <p>Happy birthday, JUMBOO!! 💗 If I could wrap up all the little reasons I love you and put them in a gift box, I think the box would never close. You make ordinary moments feel special, and even the smallest things about you find a way to stay in my mind and make me smile.</p>
+    <p>For this new year of your life, I wish you the kind of happiness that feels peaceful, dreams that make you excited to wake up, and people who remind you how precious you are. I hope you keep being your wonderful, silly, beautiful self — because that is the Diksha I adore.</p>
+    <p>This little website could never hold all my feelings, but I made it with one simple thought: you deserve to feel celebrated, not just today, but in all the tiny moments after today too.</p>
+    <p>Whatever this year brings, I hope we keep collecting memories, laughing at our own jokes, taking pictures we will look back on, and finding new reasons to choose each other. Today is your day, and I hope it feels as lovely as you make my world feel.</p>
+    <p class="signature">With all my love,<br>Mohit ♡</p>
+  </div>
+</section>
+
+<section id="gifts">
+  <h2 class="section-title">Open your little gifts 🎁</h2>
+  <p class="section-sub">Pick whichever box you like, birthday girl. Each one has a message from Mohit inside.</p>
+  <div class="gift-grid">
+    <button class="gift" data-title="A pocket full of hugs" data-message="Whenever the day feels too much, imagine the biggest, warmest hug from me. No rushing, no letting go too soon — just you feeling safe, cared for, and loved. Your hug coupon is unlimited, JUMBOO. 🫂" data-icon="🧸"><span class="gift-icon">🎁</span><h3>Gift No. 1</h3><p>Something warm is waiting inside…</p></button>
+    <button class="gift" data-title="A wish just for you" data-message="My birthday wish for you: may you be proud of how far you've come, brave enough to chase what you want, and surrounded by little moments that make your heart feel full. You deserve so much good, Diksha. ✨" data-icon="🌟"><span class="gift-icon">💝</span><h3>Gift No. 2</h3><p>Close your eyes and make a wish…</p></button>
+    <button class="gift" data-title="Your forever coupon" data-message="This coupon can be exchanged for unlimited forehead kisses, hand-holding, silly conversations, extra attention, and reminders that you are loved. Valid every day. No expiry date. Signed: Mohit 💋" data-icon="💌"><span class="gift-icon">💌</span><h3>Gift No. 3</h3><p>This one never expires.</p></button>
+  </div>
+</section>
+
+<section id="photos">
+  <h2 class="section-title">Our little universe 📸</h2>
+  <p class="section-sub">Three spaces for your favourite memories. Add your photos to the <code>photos</code> folder using the filenames shown below.</p>
+  <div class="gallery">
+    <figure class="photo" data-file="photo1.jpg"><img src="photos/photo1.jpg" alt="Mohit and Diksha's favourite memory"><div class="placeholder">♡<br><b>Our favourite memory</b><br>Save a picture as<br><code>photos/photo1.jpg</code></div><figcaption>One of my favourite memories ♡</figcaption></figure>
+    <figure class="photo" data-file="photo2.jpg"><img src="photos/photo2.jpg" alt="A favourite picture of Diksha"><div class="placeholder">♡<br><b>Your beautiful smile</b><br>Save a picture as<br><code>photos/photo2.jpg</code></div><figcaption>Your smile = my favourite view</figcaption></figure>
+    <figure class="photo" data-file="photo3.jpg"><img src="photos/photo3.jpg" alt="A sweet memory together"><div class="placeholder">♡<br><b>Just us being us</b><br>Save a picture as<br><code>photos/photo3.jpg</code></div><figcaption>Just us, exactly as we are ♡</figcaption></figure>
+  </div>
+  <p class="small-note">Tip: JPG, JPEG, or PNG works — if you use another extension, update that image's path in index.html.</p>
+</section>
+
+<section id="memories">
+  <h2 class="section-title">Our story, one little moment at a time 🌷</h2>
+  <p class="section-sub">These are starter memories. Change them to real dates and moments from your relationship.</p>
+  <div class="timeline">
+    <article class="memory"><div class="date">Chapter 01 · The beginning</div><b>The start of our story</b><br>That first little moment when you started becoming someone special to me. Edit this with how you met or your first conversation.</article>
+    <article class="memory"><div class="date">Chapter 02 · The little things</div><b>Our own kind of happiness</b><br>The jokes, the talks, the random updates, and all the tiny things that mean more than they look like they do.</article>
+    <article class="memory"><div class="date">Chapter 03 · Still choosing you</div><b>More memories to come</b><br>More laughs, more photos, more adventures, and more birthdays where I get to remind you how special you are to me.</article>
+  </div>
+</section>
+
+<section id="last-surprise">
+  <div class="final">
+    <div style="font-size:3rem" aria-hidden="true">💜 ✨ 💗</div>
+    <h2>One last surprise, JUMBOO…</h2>
+    <p>You've opened the gifts. Now there's one last little secret, saved just for you.</p>
+    <button class="btn" id="finalBtn">Unlock your secret message 🔐</button>
+    <p class="small-note">Psst… this is the last stop. Read it with your heart. ♡</p>
+  </div>
+</section>
+<footer>Made with ♡ by Mohit, for Diksha (JUMBOO!!).<br>A little lavender universe that belongs to you. 💜</footer>
+
+<audio id="song" loop preload="none"><source src="music/our-song.mp3" type="audio/mpeg"></audio>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText">
+  <div class="modal-card"><button class="close" id="closeModal" aria-label="Close message">×</button><div class="big" id="modalIcon">💗</div><h3 id="modalTitle">A little message</h3><p id="modalText" style="line-height:1.85"></p><button class="btn light" id="modalOk">Keep this in my heart ♡</button></div>
+</div>
+<script>
+const $ = s => document.querySelector(s);
+const modal = $('#modal');
+let secretUnlocked = false;
+function showMessage(title, message, icon='💗') {
+  $('#modalTitle').textContent = title;
+  $('#modalText').textContent = message;
+  $('#modalIcon').textContent = icon;
+  modal.classList.add('show');
+  $('#closeModal').focus();
+  burstHearts(window.innerWidth/2, window.innerHeight/2);
+}
+function closeModal(){modal.classList.remove('show')}
+$('#closeModal').addEventListener('click',closeModal);
+$('#modalOk').addEventListener('click',closeModal);
+modal.addEventListener('click',e=>{if(e.target===modal)closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+
+function burstHearts(x,y){
+  const symbols=['💜','💕','💖','♡','💘','✨','🦋'];
+  for(let i=0;i<9;i++){
+    const h=document.createElement('span');h.className='heart-pop';h.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+    h.style.left=(x+(Math.random()-.5)*150)+'px';h.style.top=(y+(Math.random()-.5)*40)+'px';
+    document.body.appendChild(h);setTimeout(()=>h.remove(),1400);
+  }
+}
+const floatBox=$('#floating');
+for(let i=0;i<24;i++){
+ const f=document.createElement('span');f.className='float';f.textContent=['♡','♥','✦','💜','🦋'][i%5];
+ f.style.left=Math.random()*100+'%';f.style.animationDuration=(9+Math.random()*14)+'s';
+ f.style.animationDelay=(-Math.random()*20)+'s';f.style.fontSize=(15+Math.random()*22)+'px';
+ floatBox.appendChild(f);
+}
+document.querySelectorAll('.photo img').forEach(img=>{
+  img.addEventListener('load',()=>{if(img.naturalWidth>0)img.closest('.photo').classList.add('has-image')});
+  img.addEventListener('error',()=>img.closest('.photo').classList.remove('has-image'));
+  if(img.complete&&img.naturalWidth>0)img.closest('.photo').classList.add('has-image');
+});
+$('#startBtn').addEventListener('click',async()=>{
+  $('#letter').scrollIntoView({behavior:'smooth'});
+  const song=$('#song');
+  try {
+    await song.play();
+    $('#musicStatus').textContent='Your song is playing ♫ Happy birthday, Diksha!';
+  } catch(e) {
+    $('#musicStatus').textContent='To play “Perfect”, add your MP3 as music/our-song.mp3. Tap again after adding it.';
+  }
+  burstHearts(window.innerWidth/2,window.innerHeight*.72);
+});
+document.querySelectorAll('.gift').forEach(gift=>gift.addEventListener('click',()=>{
+ showMessage(gift.dataset.title,gift.dataset.message,gift.dataset.icon);
+}));
+$('#finalBtn').addEventListener('click',()=>{
+ if(secretUnlocked)return;
+ secretUnlocked=true;
+ $('#finalBtn').textContent='Secret unlocked 💜';
+ showMessage('To my JUMBOO!! 💜','Diksha, if you could see yourself through my eyes for even a second, you would know why you are so special to me. You are not just part of my favourite memories — you are someone I look forward to making new ones with. I hope this year brings you endless reasons to smile, and I hope I get to be one of them. Happy birthday, my love. Thank you for being you. With all my heart, Mohit. ♡','💜');
+ for(let i=0;i<5;i++)setTimeout(()=>burstHearts(Math.random()*innerWidth,Math.random()*innerHeight*.7),i*180);
+});
+document.addEventListener('click',e=>{if(!e.target.closest('button')&&!e.target.closest('.modal-card'))burstHearts(e.clientX,e.clientY)});
+</script>
+</body>
+</html>
